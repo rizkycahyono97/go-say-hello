@@ -18,8 +18,8 @@ Project ini adalah contoh sederhana penggunaan Go Modules. Modul ini menyediakan
 ```go
 package go_say_hello
 
-func SayHello() string {
-    return "Hello"
+func SayHello(name string) string {
+    return "Hello" + name
 }
 ```
 
@@ -60,7 +60,7 @@ import (
 )
 
 func main() {
-    fmt.Println(go_say_hello.SayHello())
+    fmt.Println(go_say_hello.SayHello("Parameter"))
 }
 ```
 
@@ -73,7 +73,7 @@ go run main.go
 **Output yang diharapkan:**
 
 ```
-Hello
+Hello Parameter
 ```
 
 ## 🛠 Troubleshooting
